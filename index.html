@@ -1,0 +1,1163 @@
+<title>د. زياد أحمد عبد السميع | أخصائي التغذية العلاجية</title>
+    <!-- Tailwind CSS --><!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Tajawal & Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#081c15',
+                            forest: '#1b4332',
+                            medium: '#2d6a4f',
+                            emerald: '#40916c',
+                            light: '#52b788',
+                            accent: '#74c69d',
+                            soft: '#d8f3dc',
+                            gold: '#d4af37'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8faf9;
+            color: #1f2937;
+        }
+        .bg-glass {
+            background: rgba(27, 67, 50, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(27, 67, 50, 0.08), 0 8px 10px -6px rgba(27, 67, 50, 0.04);
+        }
+        .gradient-border {
+            border-image: linear-gradient(to bottom, #52b788, #1b4332) 1;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #081c15;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #40916c;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #52b788;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-emerald selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-medium/30 text-white shadow-xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Name -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-medium to-brand-accent p-0.5 shadow-lg shadow-brand-emerald/20 group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-brand-dark rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-heart-pulse text-brand-accent text-2xl animate-pulse"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-black text-xl tracking-wide text-white group-hover:text-brand-accent transition-colors">د. زياد أحمد عبد السميع</span>
+                        <span class="text-xs text-brand-soft font-semibold">أخصائي تغذية علاجية</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                    <a href="#about" class="text-slate-200 hover:text-brand-accent transition-colors">عن الدكتور</a>
+                    <a href="#services" class="text-slate-200 hover:text-brand-accent transition-colors">الخدمات العلاجية</a>
+                    <a href="#calculators" class="text-slate-200 hover:text-brand-accent transition-colors">الحاسبات الصحية</a>
+                    <a href="#packages" class="text-slate-200 hover:text-brand-accent transition-colors">باقات المتابعة</a>
+                    <a href="#payment" class="text-slate-200 hover:text-brand-accent transition-colors">طرق الدفع</a>
+                    <a href="#booking" class="text-slate-200 hover:text-brand-accent transition-colors">حجز استشارة</a>
+                </div>
+
+                <!-- Call Button -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="https://wa.me/201010885377" target="_blank" class="flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-brand-emerald hover:from-emerald-600 hover:to-brand-medium text-white px-5 py-2.5 rounded-full font-bold shadow-lg shadow-emerald-900/30 hover:shadow-emerald-900/50 hover:-translate-y-0.5 transition-all text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>تواصل واتساب</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/98 border-b border-brand-medium/40 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-200 hover:text-brand-accent border-b border-white/5">عن الدكتور</a>
+            <a href="#services" class="block py-2 text-slate-200 hover:text-brand-accent border-b border-white/5">الخدمات العلاجية</a>
+            <a href="#calculators" class="block py-2 text-slate-200 hover:text-brand-accent border-b border-white/5">الحاسبات الصحية</a>
+            <a href="#packages" class="block py-2 text-slate-200 hover:text-brand-accent border-b border-white/5">باقات المتابعة</a>
+            <a href="#payment" class="block py-2 text-slate-200 hover:text-brand-accent border-b border-white/5">طرق الدفع</a>
+            <a href="#booking" class="block py-2 text-slate-200 hover:text-brand-accent border-b border-white/5">حجز استشارة</a>
+            <a href="https://wa.me/201010885377" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 text-white py-3 rounded-xl font-bold mt-4 shadow-md">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>01010885377</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex items-center bg-gradient-to-br from-brand-dark via-brand-forest to-slate-900 text-white overflow-hidden">
+        <!-- Abstract Glow BG -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-emerald/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-right">
+                    
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-medium/40 border border-brand-accent/30 text-brand-soft text-sm font-bold backdrop-blur-sm shadow-inner">
+                        <i class="fa-solid fa-leaf text-brand-accent"></i>
+                        <span>العيادة التخصصية للتغذية العلاجية والقوام المثالي</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                            د. زياد أحمد عبد السميع
+                        </h1>
+                        <p class="text-xl sm:text-2xl text-brand-accent font-bold">
+                            أخصائي التغذية العلاجية وتعديل السلوك الغذائي
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md space-y-2">
+                        <p class="text-lg font-bold text-emerald-200 italic">
+                            "التغذية العلاجية ليست حماية مؤقتة :: بل أسلوب حياة"
+                        </p>
+                        <p class="text-sm text-slate-300 font-medium">
+                            🌿 <span class="text-brand-soft font-bold">غذائك هو دواؤك</span> — لصحة أفضل .. لحياة أجمل
+                        </p>
+                    </div>
+
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        نقدم أنظمة غذائية متكاملة ومخصصة علمياً لعلاج السمنة والنحافة، إدارة الأمراض المزمنة كالسكري ومقاومة الإنسولين، وتحسين جودة الحياة بأسلوب علمي ومستدام دون حرمان.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#booking" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-emerald to-emerald-500 hover:from-brand-medium hover:to-emerald-600 text-white font-extrabold text-lg shadow-xl shadow-brand-emerald/20 hover:scale-105 transition-all flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>احجز استشارتك الآن</span>
+                        </a>
+                        <a href="#calculators" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-lg border border-white/20 backdrop-blur-sm transition-all flex items-center gap-3">
+                            <i class="fa-solid fa-calculator text-brand-accent"></i>
+                            <span>الحاسبات الصحية</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-brand-accent">+1000</div>
+                            <div class="text-xs text-slate-300">مريض تمت متابعتهم</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-brand-accent">100%</div>
+                            <div class="text-xs text-slate-300">برامج مخصصة فردياً</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-brand-accent">24/7</div>
+                            <div class="text-xs text-slate-300">متابعة دقيقة وتوجيه</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md bg-gradient-to-b from-brand-medium to-brand-dark p-1 rounded-3xl shadow-2xl border border-brand-accent/30">
+                        <div class="bg-brand-dark rounded-[22px] p-6 text-center space-y-6 relative overflow-hidden">
+                            
+                            <div class="w-32 h-32 mx-auto rounded-full bg-brand-forest/60 border-2 border-brand-accent flex items-center justify-center shadow-inner relative">
+                                <i class="fa-solid fa-user-doctor text-6xl text-brand-accent"></i>
+                                <span class="absolute bottom-1 right-1 w-6 h-6 bg-emerald-500 rounded-full border-2 border-brand-dark flex items-center justify-center text-xs text-white">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-black text-white">د. زياد أحمد عبد السميع</h3>
+                                <p class="text-sm text-brand-soft mt-1">تغذية علاجية - تخسيس وزيادة وزن - متابعة سكري</p>
+                            </div>
+
+                            <div class="space-y-3 bg-brand-forest/40 p-4 rounded-xl border border-brand-medium/50 text-right text-xs text-slate-200">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-brand-accent"></i>
+                                    <span>أنظمة غذائية مرنة تناسب أسلوب حياتك</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-brand-accent"></i>
+                                    <span>برامج خاصة لمقاومة الإنسولين وتكيس المبيضين</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-brand-accent"></i>
+                                    <span>متابعة أسبوعية دقيقة للقياسات والوزن</span>
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/201010885377" target="_blank" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-colors">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>تواصل عبر الواتساب: 01010885377</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-emerald font-bold text-sm tracking-wider uppercase bg-brand-soft px-3 py-1 rounded-full">خدماتنا التخصصية</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-brand-dark">خدمات التغذية العلاجية المتكاملة</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    نصمم خطتك الغذائية بعناية فائقة بناءً على حالتك الصحية والتحاليل الطبية لضمان الوصول لأفضل نتائج صحية بدنية ودائمة.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-slate-200/80 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-brand-forest flex items-center justify-center text-2xl font-bold mb-5 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-weight-scale"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">نظام غذائي لخفض الوزن</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        برامج التخسيس والتخلص من الدهون الخشوية بطريقة صحية دون التأثير على الكتلة العضلية أو النضارة.
+                    </p>
+                    <a href="#booking" class="text-brand-emerald font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                        <span>طلب النظام</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-slate-200/80 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-brand-forest flex items-center justify-center text-2xl font-bold mb-5 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">نظام غذائي لزيادة الوزن</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        علاج النحافة الشديدة وزيادة الكتلة العضلية والوزن بصورة صحية ومتوازنة وتفتيح الشهية.
+                    </p>
+                    <a href="#booking" class="text-brand-emerald font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                        <span>طلب النظام</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-slate-200/80 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-brand-forest flex items-center justify-center text-2xl font-bold mb-5 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">السكري ومقاومة الإنسولين</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        أنظمة خافضة لمؤشر السكر في الدم لعلاج مقاومة الإنسولين، تكيس المبيضين، والسيطرة على السكري.
+                    </p>
+                    <a href="#booking" class="text-brand-emerald font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                        <span>طلب النظام</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-slate-200/80 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-brand-forest flex items-center justify-center text-2xl font-bold mb-5 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-stomach"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">أمراض الجهاز الهضمي</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        برامج للتغلب على مشاكل القولون العصبي، ارتجاع المريء، جرثومة المعدة، والانتفاخات المزمنة.
+                    </p>
+                    <a href="#booking" class="text-brand-emerald font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                        <span>طلب النظام</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-slate-200/80 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-brand-forest flex items-center justify-center text-2xl font-bold mb-5 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">تغذية الرياضيين</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        حساب دقيق لاحتياجات الماكروز والبروتين لزيادة البناء العضلي وتحسين الأداء الرياضي والاستشفاء.
+                    </p>
+                    <a href="#booking" class="text-brand-emerald font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                        <span>طلب النظام</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-slate-200/80 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-brand-forest flex items-center justify-center text-2xl font-bold mb-5 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">التغذية أثناء الحمل والرضاعة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        توفير العناصر الغذائية اللازمة لصحة الأم والجنين وتفادي سكري الحمل والانيميا بدون زيادة وزن مفرطة.
+                    </p>
+                    <a href="#booking" class="text-brand-emerald font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                        <span>طلب النظام</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-slate-200/80 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-brand-forest flex items-center justify-center text-2xl font-bold mb-5 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">برامج غذائية للحالات الخاصة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        تغذية مرضى الضغط، النقرس، ارتفاع كوليسترول الدم، الغدة الدرقية، وكبار السن.
+                    </p>
+                    <a href="#booking" class="text-brand-emerald font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                        <span>طلب النظام</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-slate-200/80 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-brand-forest flex items-center justify-center text-2xl font-bold mb-5 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">استشارات غذائية فردية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        جلسات استشارية وتقييم أسلوب الحياة اليومي مع تحليل التحاليل الطبية وتقديم خطة نصائح مباشرة.
+                    </p>
+                    <a href="#booking" class="text-brand-emerald font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                        <span>حجز استشارة</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculators Section -->
+    <section id="calculators" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+                <span class="text-brand-emerald font-bold text-sm tracking-wider uppercase bg-brand-soft px-3 py-1 rounded-full">أدوات صحية مجانية</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-brand-dark">الحاسبات الصحية التفاعلية</h2>
+                <p class="text-slate-600">احسب مؤشر كتلة جسمك واحتياجك اليومي من السعرات والماء بدقة</p>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-slate-100 p-1.5 rounded-2xl border border-slate-200 inline-flex gap-2">
+                    <button onclick="switchTab('bmi')" id="tab-bmi" class="tab-btn px-6 py-2.5 rounded-xl font-bold text-sm transition-all bg-brand-forest text-white shadow-md">
+                        <i class="fa-solid fa-scale-balanced ml-1"></i> حاسبة BMI
+                    </button>
+                    <button onclick="switchTab('tdee')" id="tab-tdee" class="tab-btn px-6 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-600 hover:text-brand-forest">
+                        <i class="fa-solid fa-fire ml-1"></i> السعرات الحرارية (TDEE)
+                    </button>
+                    <button onclick="switchTab('water')" id="tab-water" class="tab-btn px-6 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-600 hover:text-brand-forest">
+                        <i class="fa-solid fa-glass-water ml-1"></i> احتياج الماء
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Container -->
+            <div class="max-w-3xl mx-auto bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-lg">
+                
+                <!-- 1. BMI CALCULATOR -->
+                <div id="calc-bmi" class="space-y-6">
+                    <h3 class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                        <i class="fa-solid fa-calculator text-brand-emerald"></i>
+                        <span>حاسبة مؤشر كتلة الجسم (Body Mass Index)</span>
+                    </h3>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الجنس</label>
+                            <select id="bmi-gender" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                                <option value="male">ذكر</option>
+                                <option value="female">أنثى</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">العمر (سنة)</label>
+                            <input type="number" id="bmi-age" value="25" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الوزن (كجم)</label>
+                            <input type="number" id="bmi-weight" placeholder="مثال: 75" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الطول (سم)</label>
+                            <input type="number" id="bmi-height" placeholder="مثال: 175" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                        </div>
+                    </div>
+
+                    <button onclick="calculateBMI()" class="w-full py-3.5 bg-brand-forest hover:bg-brand-medium text-white font-bold rounded-xl shadow-md transition-all">
+                        احسب النتيجة الان
+                    </button>
+
+                    <!-- Result Box -->
+                    <div id="bmi-result" class="hidden p-6 rounded-2xl bg-white border border-slate-200 text-center space-y-3">
+                        <div class="text-sm font-semibold text-slate-500">مؤشر كتلة جسمك هو:</div>
+                        <div id="bmi-value" class="text-4xl font-black text-brand-dark">--</div>
+                        <div id="bmi-status" class="inline-block px-4 py-1.5 rounded-full text-sm font-bold bg-slate-100 text-slate-800">--</div>
+                        <p id="bmi-advice" class="text-xs text-slate-600 pt-2 border-t border-slate-100">--</p>
+                    </div>
+                </div>
+
+                <!-- 2. TDEE CALCULATOR -->
+                <div id="calc-tdee" class="hidden space-y-6">
+                    <h3 class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                        <i class="fa-solid fa-fire text-brand-emerald"></i>
+                        <span>حاسبة السعرات اليومية والماكروز (TDEE & BMR)</span>
+                    </h3>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">النوع</label>
+                            <select id="tdee-gender" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                                <option value="male">ذكر</option>
+                                <option value="female">أنثى</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">العمر</label>
+                            <input type="number" id="tdee-age" value="25" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الوزن (كجم)</label>
+                            <input type="number" id="tdee-weight" placeholder="70" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الطول (سم)</label>
+                            <input type="number" id="tdee-height" placeholder="170" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold text-slate-700 mb-2">مستوى النشاط البدني</label>
+                            <select id="tdee-activity" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                                <option value="1.2">خامل (قليل أو لا يمارس التمارين)</option>
+                                <option value="1.375">نشاط خفيف (تمارين 1-3 أيام/أسبوع)</option>
+                                <option value="1.55">نشاط متوسط (تمارين 3-5 أيام/أسبوع)</option>
+                                <option value="1.725">نشاط عالٍ (تمارين 6-7 أيام/أسبوع)</option>
+                            </select>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الهدف الصحي</label>
+                            <select id="tdee-goal" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                                <option value="lose">إنقاص الوزن (خسارة دهون)</option>
+                                <option value="maintain">الحفاظ على الوزن الحالي</option>
+                                <option value="gain">زيادة الوزن (بناء عضلات)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button onclick="calculateTDEE()" class="w-full py-3.5 bg-brand-forest hover:bg-brand-medium text-white font-bold rounded-xl shadow-md transition-all">
+                        احسب السعرات المستهدفة
+                    </button>
+
+                    <div id="tdee-result" class="hidden p-6 rounded-2xl bg-white border border-slate-200 space-y-4">
+                        <div class="text-center">
+                            <div class="text-xs text-slate-500 font-bold">السعرات الحرارية اليومية المستهدفة:</div>
+                            <div id="tdee-calories" class="text-4xl font-black text-brand-emerald my-1">--</div>
+                            <div class="text-xs text-slate-400">سعرة حرارية / يوم</div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 pt-4 border-t border-slate-100 text-center">
+                            <div class="p-2 bg-emerald-50 rounded-xl">
+                                <span class="block text-xs text-slate-500">البروتين</span>
+                                <span id="macro-protein" class="font-bold text-brand-forest">-- غرام</span>
+                            </div>
+                            <div class="p-2 bg-emerald-50 rounded-xl">
+                                <span class="block text-xs text-slate-500">الكربوهيدرات</span>
+                                <span id="macro-carbs" class="font-bold text-brand-forest">-- غرام</span>
+                            </div>
+                            <div class="p-2 bg-emerald-50 rounded-xl">
+                                <span class="block text-xs text-slate-500">الدهون الصحية</span>
+                                <span id="macro-fats" class="font-bold text-brand-forest">-- غرام</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. WATER CALCULATOR -->
+                <div id="calc-water" class="hidden space-y-6">
+                    <h3 class="text-xl font-bold text-brand-dark flex items-center gap-2">
+                        <i class="fa-solid fa-droplet text-blue-500"></i>
+                        <span>حاسبة الاحتياج اليومي من الماء</span>
+                    </h3>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الوزن بالكيلوجرام</label>
+                            <input type="number" id="water-weight" placeholder="مثال: 70" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">مدة التمارين اليومية (بالدقائق)</label>
+                            <input type="number" id="water-exercise" value="30" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-white font-medium">
+                        </div>
+                    </div>
+
+                    <button onclick="calculateWater()" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition-all">
+                        احسب كمية الماء اليومية
+                    </button>
+
+                    <div id="water-result" class="hidden p-6 rounded-2xl bg-white border border-slate-200 text-center space-y-3">
+                        <div class="text-sm font-semibold text-slate-500">احتياجك اليومي الأدنى من الماء:</div>
+                        <div id="water-liters" class="text-4xl font-black text-blue-600">-- لتر</div>
+                        <div id="water-cups" class="text-sm font-bold text-slate-700">أي ما يعادل تقريباً -- أكواب يومياً</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-brand-accent font-bold text-sm tracking-wider uppercase bg-brand-forest/60 border border-brand-medium px-3 py-1 rounded-full">عروض وباقات التغذية العلاجية</span>
+                <h2 class="text-3xl sm:text-4xl font-black">اختر نظام المتابعة المناسب لك بأسعار مميزة</h2>
+                <p class="text-slate-400">متابعة دقيقة وشخصية مباشرة مع د. زياد أحمد عبد السميع للوصول إلى هدفك بأمان</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Package 1: Free Evaluation -->
+                <div class="bg-brand-dark/90 rounded-3xl p-8 border border-brand-medium/50 flex flex-col justify-between hover:border-brand-accent transition-all relative">
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-widest">جلسة تعارف وتقييم</span>
+                                <h3 class="text-2xl font-black mt-1">جلسة التقييم الشاملة</h3>
+                                <p class="text-xs text-slate-400 mt-2">جلسة استشارية أولى لتقييم الوضع الصحي ووضع الخطوات الأولى.</p>
+                            </div>
+                            <span class="bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold px-2.5 py-1 rounded-lg">100% مجاناً</span>
+                        </div>
+
+                        <div class="border-t border-b border-white/10 py-4 flex items-baseline gap-2">
+                            <span class="text-4xl font-black text-emerald-400">مجاناً</span>
+                            <span class="text-xs text-slate-400">بدون أي تكلفة</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> تقييم التحاليل الطبية والتاريخ المرضي</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> حساب مكونات الجسم واحتياج السعرات</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> خطة غذائية مبسطة للأسبوع الأول</li>
+                        </ul>
+                    </div>
+
+                    <a href="#booking" onclick="selectPackage('جلسة التقييم الشاملة (مجاناً)')" class="mt-8 block w-full py-3.5 text-center bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition-all shadow-md">
+                        احجز الجلسة المجانية الآن
+                    </a>
+                </div>
+
+                <!-- Package 2: Monthly (Popular - 25% Off) -->
+                <div class="bg-gradient-to-b from-brand-forest to-brand-dark rounded-3xl p-8 border-2 border-brand-accent shadow-2xl shadow-brand-emerald/20 flex flex-col justify-between relative transform md:-translate-y-4">
+                    <div class="absolute -top-4 right-1/2 translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-black text-xs uppercase px-4 py-1.5 rounded-full shadow-md flex items-center gap-1">
+                        <i class="fa-solid fa-fire text-red-600"></i>
+                        <span>خصم 25% - الأكثر طلباً</span>
+                    </div>
+
+                    <div class="space-y-6 mt-2">
+                        <div>
+                            <span class="text-xs font-extrabold text-brand-accent uppercase tracking-widest">الباقة الشاملة</span>
+                            <h3 class="text-2xl font-black mt-1">باقة المتابعة الشهرية</h3>
+                            <p class="text-xs text-brand-soft mt-2">تغيير جذري في أسلوب حياتك مع التزام ومتابعة دقيقة لمدة 4 أسابيع.</p>
+                        </div>
+
+                        <div class="border-t border-b border-brand-medium py-4">
+                            <div class="flex items-baseline gap-3">
+                                <span class="text-4xl font-black text-brand-accent">375 <span class="text-lg">ج.م</span></span>
+                                <span class="text-lg text-slate-400 line-through font-semibold">500 ج.م</span>
+                            </div>
+                            <span class="text-xs text-emerald-300 font-medium">وفرت 125 جنيه (توفير 25%)</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-200">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> نظام غذائي علاجي مخصص يتجدد أسبوعياً</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> متابعة أسبوعية للوزن والقياسات</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> التواصل المباشر عبر الواتساب للاستفسارات</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> تعديلات فورية على الوجبات حسب رغبتك</li>
+                        </ul>
+                    </div>
+
+                    <a href="#booking" onclick="selectPackage('باقة المتابعة الشهرية (375 ج.م)')" class="mt-8 block w-full py-3.5 text-center bg-gradient-to-r from-emerald-500 to-brand-emerald hover:from-emerald-600 hover:to-brand-medium text-white font-extrabold rounded-xl transition-all shadow-lg">
+                        احجز الباقة الشهرية (375 ج.م)
+                    </a>
+                </div>
+
+                <!-- Package 3: 3-Months (50% Off) -->
+                <div class="bg-brand-dark/90 rounded-3xl p-8 border border-brand-medium/50 flex flex-col justify-between hover:border-brand-accent transition-all relative">
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-extrabold text-amber-400 uppercase tracking-widest">التحول الكامل</span>
+                                <h3 class="text-2xl font-black mt-1">باقة 3 أشهر المكثفة</h3>
+                                <p class="text-xs text-slate-400 mt-2">للحالات التي تحتاج علاج كلي لمقاومة الإنسولين أو خسارة أوزان كبيرة.</p>
+                            </div>
+                            <span class="bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold px-2.5 py-1 rounded-lg">خصم 50%</span>
+                        </div>
+
+                        <div class="border-t border-b border-white/10 py-4">
+                            <div class="flex items-baseline gap-3">
+                                <span class="text-4xl font-black text-amber-400">750 <span class="text-lg">ج.م</span></span>
+                                <span class="text-lg text-slate-400 line-through font-semibold">1500 ج.م</span>
+                            </div>
+                            <span class="text-xs text-amber-300 font-medium">وفرت 750 جنيه (نصف السعر)</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> كل مميزات الباقة الشهرية طوال 12 أسبوع</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> برنامج تثبيت الوزن بعد الوصول للهدف</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> نصائح لتثبيت أسلوب الحياة وتحسين الصحة</li>
+                        </ul>
+                    </div>
+
+                    <a href="#booking" onclick="selectPackage('باقة 3 أشهر المكثفة (750 ج.م)')" class="mt-8 block w-full py-3.5 text-center bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all border border-white/20">
+                        احجز باقة الـ 3 أشهر (750 ج.م)
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section id="payment" class="py-16 bg-slate-100 border-t border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+                <span class="text-brand-emerald font-bold text-sm tracking-wider uppercase bg-brand-soft px-3 py-1 rounded-full">طرق الدفع الإلكتروني</span>
+                <h2 class="text-3xl font-black text-brand-dark">طرق وسهولة الدفع وتأكيد الاشتراك</h2>
+                <p class="text-slate-600 text-sm">يمكنك تحويل قيمة الباقات بسهولة عبر الوسائل التالية وإرسال الإيصال عبر الواتساب لتأكيد حجزك فوراً</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Vodafone Cash -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-red-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-red-600 text-white flex items-center justify-center font-black text-xl shadow-md">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900">فودافون كاش (Vodafone Cash)</h3>
+                                    <span class="text-xs text-slate-500">حفظ أو تحويل مباشر</span>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 bg-red-50 text-red-600 font-bold text-xs rounded-lg border border-red-200">فوري</span>
+                        </div>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            قم بالتحويل عبر تطبيق فودافون كاش أو كود <code class="bg-slate-100 px-1.5 py-0.5 rounded text-red-600 font-mono">*9#</code> إلى رقم المحفظة التالي:
+                        </p>
+
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-mobile-screen-button text-red-600 text-lg"></i>
+                                <span class="font-mono font-black text-xl text-slate-800 tracking-wider">01010885377</span>
+                            </div>
+                            <button onclick="copyToClipboard('01010885377', 'voda-copy-btn')" id="voda-copy-btn" class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-all flex items-center gap-1">
+                                <i class="fa-solid fa-copy"></i>
+                                <span>نسخ الرقم</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-info text-red-500"></i>
+                        <span>احفظ صورة/لقطة الشاشة لإيصال التحويل لإرسالها بالخطوة التالية.</span>
+                    </div>
+                </div>
+
+                <!-- InstaPay -->
+                <div class="bg-white rounded-3xl p-6 border-2 border-purple-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-purple-700 text-white flex items-center justify-center font-black text-xl shadow-md">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900">انستا باي (InstaPay)</h3>
+                                    <span class="text-xs text-slate-500">تحويل بنكي لحظي مجاني</span>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 bg-purple-50 text-purple-700 font-bold text-xs rounded-lg border border-purple-200">لحظي</span>
+                        </div>
+
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            افتح تطبيق انستا باي واختر تحويل إلى رقم الهاتف المسجل باسم العيادة:
+                        </p>
+
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-paper-plane text-purple-700 text-lg"></i>
+                                <span class="font-mono font-black text-xl text-slate-800 tracking-wider">01010885377</span>
+                            </div>
+                            <button onclick="copyToClipboard('01010885377', 'insta-copy-btn')" id="insta-copy-btn" class="px-3 py-1.5 bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs rounded-xl transition-all flex items-center gap-1">
+                                <i class="fa-solid fa-copy"></i>
+                                <span>نسخ الرقم</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-info text-purple-600"></i>
+                        <span>التحويل يتم معالجته مباشرة وبدون أي رسوم إضافية.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirmation Toast Banner -->
+            <div class="max-w-4xl mx-auto mt-6 bg-brand-soft/80 border border-brand-accent/40 rounded-2xl p-4 text-center text-xs text-brand-dark font-semibold flex items-center justify-center gap-2">
+                <i class="fa-solid fa-shield-check text-brand-emerald text-base"></i>
+                <span>بعد إتمام التحويل، يرجى إرفاق إيصال التحويل (Screenshot) في المحادثة المباشرة لتفعيل اشتراكك فوراً.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Booking / Consultation Form -->
+    <section id="booking" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 card-shadow">
+                
+                <div class="text-center space-y-3 mb-8">
+                    <div class="w-16 h-16 rounded-full bg-brand-soft text-brand-forest mx-auto flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-file-medical"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-brand-dark">نموذج حجز الاستشارة وبدء المتابعة</h2>
+                    <p class="text-slate-600 text-sm">قم بتعبئة بياناتك الصحية ليتم تجهيز استمارتك وإرسالها مباشرة للدكتور عبر الواتساب</p>
+                </div>
+
+                <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الاسم بالكامل *</label>
+                            <input type="text" id="patient-name" required placeholder="أدخل اسمك الكريم" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">رقم الهاتف / الواتساب *</label>
+                            <input type="tel" id="patient-phone" required placeholder="01xxxxxxxxx" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">العمر</label>
+                            <input type="number" id="patient-age" placeholder="سنة" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الوزن (كجم)</label>
+                            <input type="number" id="patient-weight" placeholder="كجم" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الطول (سم)</label>
+                            <input type="number" id="patient-height" placeholder="سم" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الهدف الرئيسي من المتابعة</label>
+                            <select id="patient-goal" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium">
+                                <option value="تخسيس وإنقاص وزن">تخسيس وإنقاص وزن</option>
+                                <option value="زيادة وزن وعلاج نحافة">زيادة وزن وعلاج نحافة</option>
+                                <option value="علاج مقاومة إنسولين / سكري">علاج مقاومة إنسولين / سكري</option>
+                                <option value="علاج مشاكل القولون والجهاز الهضمي">علاج مشاكل القولون والجهاز الهضمي</option>
+                                <option value="تغذية رياضية وبناء عضلات">تغذية رياضية وبناء عضلات</option>
+                                <option value="تغذية للحمل والرضاعة">تغذية للحمل والرضاعة</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">الباقة المطلوبة</label>
+                            <select id="patient-package" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium">
+                                <option value="باقة المتابعة الشهرية (375 ج.م)">باقة المتابعة الشهرية (خصم 25% - 375 ج.م)</option>
+                                <option value="باقة 3 أشهر المكثفة (750 ج.م)">باقة 3 أشهر المكثفة (خصم 50% - 750 ج.م)</option>
+                                <option value="جلسة التقييم الشاملة (مجاناً)">جلسة التقييم الشاملة (مجاناً)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">طريقة الدفع المفضلة</label>
+                            <select id="patient-payment" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium">
+                                <option value="فودافون كاش (Vodafone Cash)">فودافون كاش (01010885377)</option>
+                                <option value="انستا باي (InstaPay)">انستا باي (01010885377)</option>
+                                <option value="دفع عند الجلسة / مجاني">دفع عند الجلسة / مجاني</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-2">هل تعاني من أي أمراض مزمنة أو تتناول أدوية حالياً؟</label>
+                        <textarea id="patient-notes" rows="3" placeholder="أذكر هنا أي حالات صحية مثل: (ضغط، سكري، غدة، قاولون، أو تحاليل حديثة...)" class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-emerald outline-none bg-slate-50 font-medium"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-lg rounded-xl shadow-xl flex items-center justify-center gap-3 transition-all">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>إرسال الاستمارة وتأكيد الحجز عبر الواتساب</span>
+                    </button>
+
+                    <p class="text-center text-xs text-slate-400">
+                        🔒 سيتم تحويلك مباشرة للدردشة الرسمية لـ د. زياد أحمد عبر الرقم 01010885377
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Articles & Nutrition Tips -->
+    <section id="tips" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-brand-emerald font-bold text-sm tracking-wider uppercase bg-brand-soft px-3 py-1 rounded-full">معلومات تهم صحتك</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-brand-dark">نصائح ومقالات في التغذية العلاجية</h2>
+                <p class="text-slate-600">ارتقِ بوعيك الصحي من خلال حقائق علمية مبسطة</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-forest text-brand-accent flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark">علامات مقاومة الإنسولين وكيف تتغلب عليها؟</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        الشعور بالنعاس بعد الوجبات، التوق المستمر للسكريات، وزيادة محيط الخصر هي أبرز الإنذارات. الحل يبدأ بتقليل النشويات المكررة وممارسة الرياضة.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-forest text-brand-accent flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark">لماذا تفشل حميات الحرمان القاسية؟</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        الدايت القاسي يقلل من معدل الحرق الأساسي (Metabolism) ويسبب فقدان الكتلة العضلية، مما يؤدي لإعادة اكتساب الوزن بسرعة مضاعفة.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-forest text-brand-accent flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark">غذائك هو دواؤك الحقيقي</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        اختيار الأطعمة الطبيعية الغنية بالمغذيات يقلل التهابات الجسم المسببة للأمراض المزمنة ويمنحك طاقة وحيوية مستدامة.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white border-t border-brand-forest pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
+                
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-emerald flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <span class="font-black text-xl">د. زياد أحمد عبد السميع</span>
+                    </div>
+                    <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
+                        أخصائي التغذية العلاجية وتعديل السلوك الغذائي. نرافقك خطوة بخطوة للوصول إلى هدفك الصحي بأسلوب علمي وآمن.
+                    </p>
+                    <p class="text-xs text-brand-soft italic">
+                        "لصحة أفضل .. لحياة أجمل"
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-bold text-brand-accent text-sm">روابط سريعة</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><a href="#services" class="hover:text-white transition-colors">الخدمات العلاجية</a></li>
+                        <li><a href="#calculators" class="hover:text-white transition-colors">الحاسبات الصحية</a></li>
+                        <li><a href="#packages" class="hover:text-white transition-colors">باقات المتابعة</a></li>
+                        <li><a href="#booking" class="hover:text-white transition-colors">حجز الاستشارة</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-bold text-brand-accent text-sm">تواصل مباشر</h4>
+                    <div class="space-y-2 text-xs text-slate-300">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+                            <span dir="ltr">01010885377</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-emerald-400 text-sm"></i>
+                            <span dir="ltr">01010885377</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-emerald-400 text-sm"></i>
+                            <span>المتابعة والاستشارات يومياً</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 text-center text-xs text-slate-500">
+                جميع الحقوق محفوظة © <span id="year"></span> | منصة د. زياد أحمد عبد السميع - أخصائي التغذية العلاجية
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating WhatsApp Button -->
+    <a href="https://wa.me/201010885377" target="_blank" class="fixed bottom-6 left-6 z-50 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform hover:bg-emerald-600">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Set Year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Copy text helper
+        function copyToClipboard(text, btnId) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const btn = document.getElementById(btnId);
+            if (btn) {
+                const originalHtml = btn.innerHTML;
+                btn.innerHTML = `<i class="fa-solid fa-check"></i> تم النسخ!`;
+                btn.classList.add('bg-emerald-600');
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.classList.remove('bg-emerald-600');
+                }, 2000);
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tab Switching for Calculators
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-forest', 'text-white', 'shadow-md');
+                btn.classList.add('text-slate-600');
+            });
+            
+            document.getElementById('calc-bmi').classList.add('hidden');
+            document.getElementById('calc-tdee').classList.add('hidden');
+            document.getElementById('calc-water').classList.add('hidden');
+
+            if(tab === 'bmi') {
+                document.getElementById('calc-bmi').classList.remove('hidden');
+                document.getElementById('tab-bmi').classList.add('bg-brand-forest', 'text-white', 'shadow-md');
+            } else if(tab === 'tdee') {
+                document.getElementById('calc-tdee').classList.remove('hidden');
+                document.getElementById('tab-tdee').classList.add('bg-brand-forest', 'text-white', 'shadow-md');
+            } else if(tab === 'water') {
+                document.getElementById('calc-water').classList.remove('hidden');
+                document.getElementById('tab-water').classList.add('bg-brand-forest', 'text-white', 'shadow-md');
+            }
+        }
+
+        // 1. BMI Calculation Logic
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('bmi-weight').value);
+            const heightCm = parseFloat(document.getElementById('bmi-height').value);
+
+            if (!weight || !heightCm || weight <= 0 || heightCm <= 0) {
+                alert('الرجاء إدخال الوزن والطول بشكل صحيح');
+                return;
+            }
+
+            const heightM = heightCm / 100;
+            const bmi = (weight / (heightM * heightM)).toFixed(1);
+
+            const resultDiv = document.getElementById('bmi-result');
+            const bmiVal = document.getElementById('bmi-value');
+            const bmiStatus = document.getElementById('bmi-status');
+            const bmiAdvice = document.getElementById('bmi-advice');
+
+            resultDiv.classList.remove('hidden');
+            bmiVal.textContent = bmi;
+
+            if (bmi < 18.5) {
+                bmiStatus.textContent = 'نحافة (أقل من الطبيعي)';
+                bmiStatus.className = 'inline-block px-4 py-1.5 rounded-full text-sm font-bold bg-yellow-100 text-yellow-800';
+                bmiAdvice.textContent = 'ينصح بمتابعة نظام غذائي لزيادة الوزن والكتلة العضلية بشكل صحي ومتوازن.';
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                bmiStatus.textContent = 'وزن مثالي وطبيعي';
+                bmiStatus.className = 'inline-block px-4 py-1.5 rounded-full text-sm font-bold bg-emerald-100 text-emerald-800';
+                bmiAdvice.textContent = 'ممتاز! احرص على الحفاظ على نظامك الغذائي المتوازن ونشاطك البدني.';
+            } else if (bmi >= 25 && bmi <= 29.9) {
+                bmiStatus.textContent = 'زيادة في الوزن';
+                bmiStatus.className = 'inline-block px-4 py-1.5 rounded-full text-sm font-bold bg-orange-100 text-orange-800';
+                bmiAdvice.textContent = 'يفضل البدء في نظام تعديل سعرات حرارية لتقليل الدهون والوصول للوزن المثالي.';
+            } else {
+                bmiStatus.textContent = 'سمنة (تحتاج متابعة علاجية)';
+                bmiStatus.className = 'inline-block px-4 py-1.5 rounded-full text-sm font-bold bg-red-100 text-red-800';
+                bmiAdvice.textContent = 'ينصح بحجز استشارة لتصميم برنامج تغذية علاجية مخصص وتفادي أي مضاعفات صحية.';
+            }
+        }
+
+        // 2. TDEE & Calories Logic
+        function calculateTDEE() {
+            const gender = document.getElementById('tdee-gender').value;
+            const age = parseInt(document.getElementById('tdee-age').value);
+            const weight = parseFloat(document.getElementById('tdee-weight').value);
+            const height = parseFloat(document.getElementById('tdee-height').value);
+            const activity = parseFloat(document.getElementById('tdee-activity').value);
+            const goal = document.getElementById('tdee-goal').value;
+
+            if (!weight || !height || !age) {
+                alert('برجاء إدخال كافة البيانات بشكل صحيح');
+                return;
+            }
+
+            // BMR mifflin-st jeor
+            let bmr = (10 * weight) + (6.25 * height) - (5 * age);
+            bmr = (gender === 'male') ? bmr + 5 : bmr - 161;
+
+            let tdee = bmr * activity;
+
+            if (goal === 'lose') {
+                tdee -= 500; // Deficit
+            } else if (goal === 'gain') {
+                tdee += 400; // Surplus
+            }
+
+            const targetCalories = Math.round(tdee);
+
+            // Macros estimation
+            const proteinGrams = Math.round(weight * 2);
+            const fatsGrams = Math.round((targetCalories * 0.25) / 9);
+            const carbsGrams = Math.round((targetCalories - (proteinGrams * 4) - (fatsGrams * 9)) / 4);
+
+            document.getElementById('tdee-calories').textContent = targetCalories;
+            document.getElementById('macro-protein').textContent = `${proteinGrams} غرام`;
+            document.getElementById('macro-carbs').textContent = `${carbsGrams} غرام`;
+            document.getElementById('macro-fats').textContent = `${fatsGrams} غرام`;
+
+            document.getElementById('tdee-result').classList.remove('hidden');
+        }
+
+        // 3. Water Calculation Logic
+        function calculateWater() {
+            const weight = parseFloat(document.getElementById('water-weight').value);
+            const exercise = parseFloat(document.getElementById('water-exercise').value) || 0;
+
+            if (!weight || weight <= 0) {
+                alert('الرجاء أدخل الوزن بالكيلوجرام');
+                return;
+            }
+
+            let liters = (weight * 0.033) + ((exercise / 30) * 0.35);
+            liters = liters.toFixed(1);
+
+            const cups = Math.round(liters * 4); // ~250ml per cup
+
+            document.getElementById('water-liters').textContent = `${liters} لتر`;
+            document.getElementById('water-cups').textContent = `أي ما يعادل تقريباً ${cups} كوب ماء يومياً`;
+            document.getElementById('water-result').classList.remove('hidden');
+        }
+
+        // Package Selection helper
+        function selectPackage(packageName) {
+            const selectElem = document.getElementById('patient-package');
+            if (selectElem) {
+                selectElem.value = packageName;
+            }
+        }
+
+        // Handle Consultation Booking Form Submit -> Pre-filled WhatsApp
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('patient-name').value;
+            const phone = document.getElementById('patient-phone').value;
+            const age = document.getElementById('patient-age').value || 'غير محدد';
+            const weight = document.getElementById('patient-weight').value || 'غير محدد';
+            const height = document.getElementById('patient-height').value || 'غير محدد';
+            const goal = document.getElementById('patient-goal').value;
+            const selectedPackage = document.getElementById('patient-package').value;
+            const paymentMethod = document.getElementById('patient-payment').value;
+            const notes = document.getElementById('patient-notes').value || 'لا يوجد';
+
+            const message = `مرحباً د. زياد، أرغب في حجز استشارة تغذية علاجية:%0A%0A` +
+                `👤 *الاسم:* ${encodeURIComponent(name)}%0A` +
+                `📞 *رقم الهاتف:* ${encodeURIComponent(phone)}%0A` +
+                `🎂 *العمر:* ${encodeURIComponent(age)} سنة%0A` +
+                `⚖️ *الوزن:* ${encodeURIComponent(weight)} كجم | 📏 *الطول:* ${encodeURIComponent(height)} سم%0A` +
+                `🎯 *الهدف:* ${encodeURIComponent(goal)}%0A` +
+                `📦 *الباقة المختارة:* ${encodeURIComponent(selectedPackage)}%0A` +
+                `💳 *طريقة الدفع:* ${encodeURIComponent(paymentMethod)}%0A` +
+                `📝 *ملاحظات صحية/أمراض:* ${encodeURIComponent(notes)}%0A%0A` +
+                `📌 *ملاحظة:* سأقوم بإرفاق صورة إيصال التحويل الآن لتأكيد الحجز.`;
+
+            const whatsappUrl = `https://wa.me/201010885377?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
